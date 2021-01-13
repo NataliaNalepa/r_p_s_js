@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>R_P_S</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <!-- -------------------- START -------------------- -->
+      <section class="start">
+        <input
+          type="image"
+          src="https://picsum.photos/200/300"
+          class="btn--start"
+        />
+      </section>
+      <!-- -------------------- MODAL -------------------- -->
+      <section class="settings-modal hide">
+        <label for="player1" class="player1">Gracz 1:</label>
+        <input
+          type="text"
+          id="player--0"
+          name="player1"
+          onchange="validation()"
+        />
+        <label for="player2" class="player2">Gracz 2:</label>
+        <input
+          type="text"
+          id="player--1"
+          name="player2"
+          onchange="validation()"
+        />
+        <input type="submit" value="Submit" class="btn btn--submit" />
+      </section>
+      <!-- -------------------- GAME -------------------- -->
+      <section class="player player--0 hide">
+        <h2 class="name" id="name--0">Player 1</h2>
+        <p class="score hidden" id="score--0">kamień</p>
+        <div class="image">
+          <img src="image-1.jpg" alt="rock" class="img img--0 hidden" />
+        </div>
+      </section>
+      <section class="player player--1 hide">
+        <h2 class="name" id="name--1">Player 2</h2>
+        <p class="score hidden" id="score--1">kamień</p>
+        <div class="image">
+          <img src="image-1.jpg" alt="rock" class="img img--1 hidden" />
+        </div>
+      </section>
+      <section class="scores hide">
+        <div>
+          <button class="btn btn--play">Play</button>
+        </div>
+        <div class="current">
+          <p class="current-label">Result:</p>
+          <p class="current-score" id="current"></p>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
